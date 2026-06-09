@@ -46,9 +46,6 @@ jobs:
         run: |
           cd simple_live_app
           flutter pub get
-      # 安装appdmg npm install -g appdmg
-      - name: Install appdmg
-        run: npm install -g appdmg
 
       # 设置flutter_distributor环境
       - name: Install flutter_distributor
