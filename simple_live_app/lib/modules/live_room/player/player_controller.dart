@@ -429,7 +429,7 @@ mixin PlayerSystemMixin on PlayerMixin, PlayerStateMixin, PlayerDanmakuMixin {
   bool danmakuStateBeforePIP = false;
 
   Future enablePIP() async {
-    if (!Platform.isAndroid) {
+    if (!(Platform.isAndroid||Platform.isIOS)) {
       return;
     }
     if (await pip.isPipAvailable == false) {
