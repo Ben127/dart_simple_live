@@ -101,7 +101,7 @@ class LiveRoomPage extends GetView<LiveRoomController> {
         }
       },
     );
-    if (!Platform.isAndroid) {
+    if (!(Platform.isAndroid||Platform.isIOS)) {
       return page;
     }
     return PiPSwitcher(
